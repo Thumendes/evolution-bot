@@ -3,13 +3,30 @@
   "version": "1.0.50",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.ts",
+    "db:generate": "bunx drizzle-kit generate",
+    "db:migrate": "bunx drizzle-kit migrate",
+    "db:push": "bunx drizzle-kit push",
+    "db:studio": "bunx drizzle-kit studio"
   },
   "dependencies": {
-    "elysia": "latest"
+    "@better-fetch/fetch": "^1.1.21",
+    "@elysiajs/openapi": "^1.4.14",
+    "@elysiajs/opentelemetry": "^1.4.10",
+    "@opentelemetry/exporter-trace-otlp-proto": "^0.211.0",
+    "@opentelemetry/sdk-trace-node": "^2.5.0",
+    "ai": "^6.0.75",
+    "arktype": "^2.1.29",
+    "dotenv": "^17.2.4",
+    "drizzle-orm": "^0.45.1",
+    "elysia": "latest",
+    "pg": "^8.18.0"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "@types/pg": "^8.16.0",
+    "bun-types": "latest",
+    "drizzle-kit": "^0.31.8",
+    "tsx": "^4.21.0"
   },
   "module": "src/index.js"
 }
